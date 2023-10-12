@@ -16,7 +16,7 @@ import io.swagger.annotations.Api;
 @Api(tags = "Gestion des produits")
 @RequestMapping("/produit")
 public class ProduitRestController {
-
+//nadhir
 	@Autowired
 	IProduitService produitService;
 
