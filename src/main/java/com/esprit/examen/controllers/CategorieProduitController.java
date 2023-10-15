@@ -61,5 +61,6 @@ public class CategorieProduitController {
 		return categorieProduitService.updateCategorieProduit(categorieProduit);
 	}
 
+	//anas commented here !!
 	
 }
