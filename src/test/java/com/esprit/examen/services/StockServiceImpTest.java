@@ -70,12 +70,4 @@ class StockServiceImpTest {
         Mockito.verify(Repo, Mockito.times(1)).deleteById(stock.getIdStock());
     }
 
-
-
-
-
-
-
-
-
 }
