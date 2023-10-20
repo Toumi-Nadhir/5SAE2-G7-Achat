@@ -35,5 +35,13 @@ public class Stock implements Serializable {
 		this.qte = qte;
 		this.qteMin = qteMin;
 	}
-
+	@Override
+	public String toString() {
+		return "Stock{" +
+				"idStock=" + idStock +
+				", libelleStock='" + libelleStock + '\'' +
+				", qte=" + qte +
+				", qteMin=" + qteMin +
+				'}';
+	}
 }
