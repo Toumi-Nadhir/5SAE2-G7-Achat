@@ -5,41 +5,18 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.5.3</version>
+		<version>2.5.9</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.esprit.examen</groupId>
-	<artifactId>tpAchatProject</artifactId>
-	<version>1.0-SNAPSHOT</version>
-	<name>tpAchatProject</name>
-	<description>tpAchatProject</description>
+	<groupId>tn.esprit.rh</groupId>
+	<artifactId>achat</artifactId>
+	<version>1.0</version>
+	<name>achat</name>
+	<description>Projet pour le module DevOps</description>
 	<properties>
 		<java.version>1.8</java.version>
 		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
 	</properties>
-
-
-	<!--	<settings>-->
-	<!--		<pluginGroups>-->
-	<!--			<pluginGroup>org.sonarsource.scanner.maven</pluginGroup>-->
-	<!--		</pluginGroups>-->
-	<!--		<profiles>-->
-	<!--			<profile>-->
-	<!--				<id>sonar</id>-->
-	<!--				<activation>-->
-	<!--					<activeByDefault>true</activeByDefault>-->
-	<!--				</activation>-->
-	<!--				<properties>-->
-	<!--					&lt;!&ndash; Optional URL to server. Default value is http://localhost:9000 &ndash;&gt;-->
-	<!--					<sonar.host.url>-->
-	<!--						http://myserver:9000-->
-	<!--					</sonar.host.url>-->
-	<!--				</properties>-->
-	<!--			</profile>-->
-	<!--		</profiles>-->
-	<!--	</settings>-->
-
-
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -49,42 +26,24 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-validation</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-engine</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/junit/junit -->
-		<!-- https://mvnrepository.com/artifact/junit/junit -->
-
-
 
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.46</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<scope>provided</scope>
-		</dependency>
+
+
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-boot-starter</artifactId>
@@ -95,17 +54,6 @@
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>3.0.0</version>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-		</dependency>
-
-
-		<dependency>
-			<groupId>org.mockito</groupId>
-			<artifactId>mockito-core</artifactId>
-		</dependency>
-
 
 	</dependencies>
 
@@ -114,60 +62,36 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-
-			<plugin>
-				<groupId>org.jacoco</groupId>
-				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.8.6</version>
-
-				<executions>
-					<execution>
-						<id>prepare-agent</id>
-						<goals><goal>prepare-agent</goal></goals>
-					</execution>
-					<execution>
-						<id>report</id>
-						<phase>test</phase>
-						<goals><goal>report</goal></goals>
-					</execution>
-				</executions>
+				<version>2.4.1</version><!--$NO-MVN-MAN-VER$-->
+				<configuration>
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
+				</configuration>
 			</plugin>
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-deploy-plugin</artifactId>
-				<version>2.8.2</version>
-
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.1.0</version><!--$NO-MVN-MAN-VER$-->
 			</plugin>
 
 
-		</plugins>
-		<!--		<finalName>5SAE2-G7-nomProjet </finalName>-->
 
+
+		</plugins>
 	</build>
 
-
-	<!--	<distributionManagement>-->
-	<!--		<repository>-->
-	<!--			<uniqueVersion>false</uniqueVersion>-->
-	<!--			<id>deploymentRepo</id>-->
-	<!--			<name>Corporate Repository</name>-->
-	<!--			<url>http://192.168.240.128:8081/repository/maven-snapshots/</url>-->
-	<!--			<layout>default</layout>-->
-	<!--		</repository>-->
-	<!--	</distributionManagement>-->
 	<distributionManagement>
-		<!--		<repository>-->
-		<!--			<id>releases</id>-->
-		<!--			<name>releases</name>-->
-		<!--			<url>http://somerepo:8081/nexus/content/repositories/releases/</url>-->
-		<!--		</repository>-->
-		<snapshotRepository>
+		<repository>
 			<id>deploymentRepo</id>
-			<name>snapshots</name>
-			<url>http://192.168.240.128:8081/repository/maven-snapshots/</url>
-			<layout>default</layout>
-		</snapshotRepository>
+			<name>admin</name>
+			<url>http://192.168.122.1:8081/repository/maven-releases/</url>
+		</repository>
+
 	</distributionManagement>
+
 </project>
