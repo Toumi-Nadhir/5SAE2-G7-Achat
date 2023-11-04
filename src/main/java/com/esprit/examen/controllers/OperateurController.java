@@ -14,7 +14,7 @@ import io.swagger.annotations.Api;
 @RequestMapping("/operateur")
 @CrossOrigin("*")
 public class OperateurController {
-// khouloud is here
+//khouloud
 	@Autowired
 	IOperateurService operateurService;
 	
