@@ -86,10 +86,15 @@
 	</build>
 
 	<distributionManagement>
+		<!--		<repository>-->
+		<!--			<id>releases</id>-->
+		<!--			<name>releases</name>-->
+		<!--			<url>http://somerepo:8081/nexus/content/repositories/releases/</url>-->
+		<!--		</repository>-->
 		<snapshotRepository>
 			<id>deploymentRepo</id>
 			<name>snapshots</name>
-			<url>http://192.168.37.128:8081/repository/maven-snapshots/</url>
+			<url>http://192.168.122.1:8081/repository/maven-snapshots/</url>
 			<layout>default</layout>
 		</snapshotRepository>
 	</distributionManagement>
