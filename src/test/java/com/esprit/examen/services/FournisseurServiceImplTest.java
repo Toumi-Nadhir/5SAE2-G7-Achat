@@ -24,11 +24,11 @@ public class FournisseurServiceImplTest {
     public void testAddFournisseur()
     {
         Fournisseur f= new Fournisseur();
-        f.setCode("njejnjnef");
-        f.setLibelle("AAAA");
+        f.setCode("codeexemple");
+        f.setLibelle("NNNN");
         f.setCategorieFournisseur(CategorieFournisseur.CONVENTIONNE);
         FournisseurService.addFournisseur(f);
-        System.out.println("Fournisseur Code Test => "+f.getCode());
+        System.out.println("Le Code Test du Fournisseur => "+f.getCode());
         assertNotNull(f.getIdFournisseur());
         assertNotNull(f.getCategorieFournisseur());
         FournisseurService.deleteFournisseur(f.getIdFournisseur());
@@ -40,10 +40,10 @@ public class FournisseurServiceImplTest {
     {
         Fournisseur f= new Fournisseur();
         f.setCode("testDelete");
-        f.setLibelle("AAAA");
+        f.setLibelle("NNNN");
         f.setCategorieFournisseur(CategorieFournisseur.CONVENTIONNE);
         FournisseurService.addFournisseur(f);
-        System.out.println("Fournisseur Test => "+f);
+        System.out.println("Fournisseur Test Delete => "+f);
         FournisseurService.deleteFournisseur(f.getIdFournisseur());
         assertNull(FournisseurService.retrieveFournisseur(f.getIdFournisseur()));
     }
@@ -55,8 +55,8 @@ public class FournisseurServiceImplTest {
         List<Fournisseur> fournisseurs= FournisseurService.retrieveAllFournisseurs();
         int expected = fournisseurs.size();
         Fournisseur f= new Fournisseur();
-        f.setCode("testRetrieve");
-        f.setLibelle("AAAA");
+        f.setCode("testRetrieveListFournisseurs");
+        f.setLibelle("NNNN");
         f.setCategorieFournisseur(CategorieFournisseur.CONVENTIONNE);
         FournisseurService.addFournisseur(f);
         assertEquals(expected+1, FournisseurService.retrieveAllFournisseurs().size());
@@ -67,8 +67,8 @@ public class FournisseurServiceImplTest {
     public void testUpdateFournisseur()
     {
         Fournisseur f= new Fournisseur();
-        f.setCode("testRetrieve");
-        f.setLibelle("AAAA");
+        f.setCode("testUpdate");
+        f.setLibelle("NNNN");
         f.setCategorieFournisseur(CategorieFournisseur.CONVENTIONNE);
         FournisseurService.addFournisseur(f);
         Fournisseur fr= FournisseurService.retrieveFournisseur(f.getIdFournisseur());

@@ -31,8 +31,8 @@ class FournisseurServiceImplMockTest {
     void testRetrieveFournisseur() {
 
         DetailFournisseur detailFournisseur = new DetailFournisseur();
-        detailFournisseur.setAdresse("bizerte");
-        detailFournisseur.setEmail("hassen.bm@esprit.tn");
+        detailFournisseur.setAdresse("Ariana");
+        detailFournisseur.setEmail("nour.benamor.1@esprit.tn");
         detailFournisseur.setFournisseur(new Fournisseur());
 
 
@@ -50,11 +50,11 @@ class FournisseurServiceImplMockTest {
     @Test
     void testAddFournisseur() {
         DetailFournisseur detailFournisseur = new DetailFournisseur();
-        detailFournisseur.setEmail("hassen.bm@esprit.tn");
+        detailFournisseur.setEmail("nour.benamor.1@esprit.tn");
         detailFournisseur.setFournisseur(new Fournisseur());
 
         Fournisseur fournisseur = new Fournisseur();
-        fournisseur.setCode("0000");
+        fournisseur.setCode("9999");
         fournisseur.setDetailFournisseur(detailFournisseur);
         assertSame(fournisseur, fournisseurServiceImpl.addFournisseur(fournisseur));
         verify(fournisseurRepository).save((Fournisseur) any());
