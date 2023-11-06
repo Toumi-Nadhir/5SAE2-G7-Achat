@@ -19,7 +19,7 @@ import static org.mockito.Mockito.verify;
 @SpringBootTest
 @ExtendWith(MockitoExtension.class)
 public class CategorieProduitServiceTest{
-
+/*
     private CategorieProduitRepository categorieProduitRepository =  Mockito.mock(CategorieProduitRepository.class);;
 
     @InjectMocks
@@ -53,7 +53,7 @@ public class CategorieProduitServiceTest{
     @Test
     void addOperateur() {
         CategorieProduit newCategorieProduit = CategorieProduit.builder()
-                .idCategorieProduit(67L)
+                .idCategorieProduit(7L)
                 .codeCategorie("anas")
                 .libelleCategorie("belarbi")
                 .build();
@@ -75,7 +75,8 @@ public class CategorieProduitServiceTest{
     @Test
     void retrieveOperateur() {
     }
-/*
+    */
+
     @Autowired
     private ICategorieProduitService categorieProduitService;
 
@@ -140,5 +141,5 @@ public class CategorieProduitServiceTest{
         // Check if the list is not empty and contains the expected number of items
         assertNotNull(categorieProduits);
         //assertEquals(2, categorieProduits.size());
-    }*/
+    }
 }
