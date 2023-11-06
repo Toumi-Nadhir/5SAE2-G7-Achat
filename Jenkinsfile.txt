@@ -1,0 +1,32 @@
+pipeline {
+
+    agent any
+    stages {
+        stage('GIT') {
+            steps {
+                echo "Getting project from Git"
+                echo "hoook"
+
+            }    
+        }
+
+
+
+     stage('Maven Clean ...') {
+            steps {
+                echo "Maven Clean ..."
+                    // maven clean
+                    sh "mvn clean package"
+                    }
+       }  
+    stage('Maven Test Mockito ...') {
+            steps {
+                echo "Maven Test Mockito Compile ..."
+                // Maven Test Mockito compile
+                sh 'mvn test'
+            }
+        }
+
+    }
+   
+}
