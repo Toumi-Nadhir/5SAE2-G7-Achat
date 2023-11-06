@@ -1,18 +1,81 @@
 package com.esprit.examen.services;
-import org.junit.Test;
+import com.esprit.examen.entities.CategorieProduit;
+import com.esprit.examen.repositories.CategorieProduitRepository;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mockito;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import static org.junit.Assert.*;
-import com.esprit.examen.entities.CategorieProduit;
-import com.esprit.examen.repositories.CategorieProduitRepository;
-import java.util.List;
 
-@RunWith(SpringRunner.class)
+import static org.junit.jupiter.api.Assertions.*;
+import java.util.ArrayList;
+import java.util.List;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.verify;
 @SpringBootTest
+@ExtendWith(MockitoExtension.class)
 public class CategorieProduitServiceTest{
 
+    private CategorieProduitRepository categorieProduitRepository =  Mockito.mock(CategorieProduitRepository.class);;
+
+    @InjectMocks
+    private CategorieProduitServiceImpl categorieProduitService ;
+    @Autowired
+    private CategorieProduitRepository junitOperRepo;
+    @Autowired
+    private ICategorieProduitService junitCategorieService;
+
+    List<CategorieProduit> categorieProduitslist = new ArrayList() {
+        {
+            add(
+                    CategorieProduit.builder()
+                            .idCategorieProduit(67L)
+                            .codeCategorie("anas")
+                            .libelleCategorie("belarbi")
+                            .build()
+
+            );
+        }};
+
+    @Test
+    void retrieveAllOperateurs() {
+
+        Mockito.when(categorieProduitRepository.findAll()).thenReturn(categorieProduitslist);
+        List<CategorieProduit> categorieProduitslist = categorieProduitService.retrieveAllCategorieProduits();
+        assertFalse(categorieProduitslist.isEmpty());
+        verify(categorieProduitRepository).findAll();
+    }
+
+    @Test
+    void addOperateur() {
+        CategorieProduit newCategorieProduit = CategorieProduit.builder()
+                .idCategorieProduit(67L)
+                .codeCategorie("anas")
+                .libelleCategorie("belarbi")
+                .build();
+        CategorieProduit responseCategorieProduit = this.junitCategorieService.addCategorieProduit(newCategorieProduit);
+        assertNotNull(responseCategorieProduit);
+        assertEquals(newCategorieProduit.getCodeCategorie(),responseCategorieProduit.getCodeCategorie());
+        this.junitCategorieService.deleteCategorieProduit(responseCategorieProduit.getIdCategorieProduit());
+
+    }
+
+    @Test
+    void deleteOperateur() {
+    }
+
+    @Test
+    void updateOperateur() {
+    }
+
+    @Test
+    void retrieveOperateur() {
+    }
+/*
     @Autowired
     private ICategorieProduitService categorieProduitService;
 
@@ -77,5 +140,5 @@ public class CategorieProduitServiceTest{
         // Check if the list is not empty and contains the expected number of items
         assertNotNull(categorieProduits);
         //assertEquals(2, categorieProduits.size());
-    }
+    }*/
 }
