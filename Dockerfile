@@ -5,7 +5,7 @@ FROM openjdk:8-jdk-alpine
 EXPOSE 8282
 
 # Copiez le fichier JAR de votre application dans le conteneur
-COPY target/achat-1.0.jar achat.jar
+COPY target/tpAchatProject-1.0.jar achat.jar
 
 # Démarrez l'application Spring Boot
 ENTRYPOINT ["java", "-jar", "achat.jar"]
