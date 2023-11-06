@@ -26,7 +26,7 @@ import static org.mockito.Mockito.verify;
 @SpringBootTest
 @ExtendWith(MockitoExtension.class)
 public class ProduitServiceImpTest {
-/*
+
     private ProduitRepository produitRepository =  Mockito.mock(ProduitRepository.class);;
 
     @InjectMocks
@@ -82,5 +82,5 @@ public class ProduitServiceImpTest {
 
         @Test
         void retrieveProduit() {
-        }*/
+        }
     }
