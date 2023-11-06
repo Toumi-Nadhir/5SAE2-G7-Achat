@@ -16,7 +16,7 @@ services:
 
   springboot-app:
 
-    image: nouresprit99/nourbenamor_g7_achat:latest
+    image: raedbejaoui/raedbejaoui-5sae2-g7-tpachatproject:latest
     container_name: springboot-app
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://192.168.142.128:3306/achatdb?createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
