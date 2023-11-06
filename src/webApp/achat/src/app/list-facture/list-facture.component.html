@@ -1,0 +1,27 @@
+<p>list-facture works!</p>
+
+
+<button class="btn btn-primary" routerLink="addfacture">Add Facture</button>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">montantRemise</th>
+        <th scope="col">montantFacture</th>
+        <th scope="col">dateCreationFacture</th>
+        <th scope="col">archivee</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let facture of facturelist; let i = index" >
+        <th scope="row"> {{i}} </th>
+        <td> {{ facture.montantRemise }} </td>
+        <td> {{ facture.montantFacture }} </td>
+        <td> {{ facture.dateCreationFacture }} </td>
+        <td> {{ facture.archivee }} </td>
+
+      </tr>
+
+    </tbody>
+  </table>

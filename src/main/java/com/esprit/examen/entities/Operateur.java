@@ -1,6 +1,7 @@
 package com.esprit.examen.entities;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.Entity;
@@ -11,16 +12,14 @@ import javax.persistence.OneToMany;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class Operateur implements Serializable{
 	private static final long serialVersionUID = 1L;
 
@@ -33,6 +32,6 @@ public class Operateur implements Serializable{
 	private String password;
 	@OneToMany
 	@JsonIgnore
-	private Set<Facture> factures;
+	private List<Facture> factures;
 	
 }

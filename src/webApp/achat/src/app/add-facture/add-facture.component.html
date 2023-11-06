@@ -1,0 +1,17 @@
+
+
+<p>add-facture works!</p>
+<button class="btn btn-success" routerLink="..">Facture List</button>
+
+
+<form  >
+    <div class="mb-3">
+      <label for="montantRemise" class="form-label">montantRemise </label>
+      <input type="text" class="form-control" id="montantRemise" name="montantRemise" [(ngModel)]="newfacture!.montantRemise">
+    </div>
+    <div class="mb-3">
+      <label for="montantFacture" class="form-label">montantFacture</label>
+      <input type="text" class="form-control" id="montantFacture" name="montantFacture" [(ngModel)]="newfacture!.montantFacture">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="OnSubmit()">Submit</button>
+  </form>
