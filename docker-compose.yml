@@ -3,7 +3,6 @@ version: "3"
 services:
   mysqldb:
     image: mysql
-    restart: always
     volumes:
       - db:/var/lib/mysql
     ports:
@@ -15,7 +14,6 @@ services:
     depends_on:
       - mysqldb
     image: nadhirtoumi/nadhirtoumi-5sae2-g7-tpachatproject
-    restart: always
     ports:
       - 8089:8089
     environment:
