@@ -173,7 +173,7 @@
 <!--			<layout>default</layout>-->
 <!--		</repository>-->
 <!--	</distributionManagement>-->
-	<distributionManagement>
+	<!--<distributionManagement>
 
 
 		<repository>
@@ -185,18 +185,25 @@
 		<snapshotRepository>
 			<id>deploymentRepo</id>
 			<name>snapshots</name>
-			<!--			<url>http://192.168.240.128:8081/repository/maven-snapshots/</url>
+			&lt;!&ndash;			<url>http://192.168.240.128:8081/repository/maven-snapshots/</url>
 
-			-->
+			&ndash;&gt;
 
-			<!--<url>http://192.168.142.128:8081/repository/maven-snapshots/</url>
+			&lt;!&ndash;<url>http://192.168.142.128:8081/repository/maven-snapshots/</url>
 			<url>http://192.168.37.128:8081/repository/maven-snapshots/</url>
-			-->
+			&ndash;&gt;
 
-			<!--<url>http://192.168.17.139:8081//repository/maven-snapshots/</url>
-			-->
+			&lt;!&ndash;<url>http://192.168.17.139:8081//repository/maven-snapshots/</url>
+			&ndash;&gt;
 		
 			<layout>default</layout>
 		</snapshotRepository>
+	</distributionManagement>-->
+
+	<distributionManagement>
+		<repository>
+			<id>deploymentRepo</id>
+			<url>http://192.168.154.175:8081/repository/maven-releases/</url>
+		</repository>
 	</distributionManagement>
 </project>
