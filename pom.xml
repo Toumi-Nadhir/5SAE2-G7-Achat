@@ -173,11 +173,11 @@
 <!--		</repository>-->
 <!--	</distributionManagement>-->
 	<distributionManagement>
-		<!--		<repository>-->
-		<!--			<id>releases</id>-->
-		<!--			<name>releases</name>-->
-		<!--			<url>http://somerepo:8081/nexus/content/repositories/releases/</url>-->
-		<!--		</repository>-->
+				<repository>
+					<id>releases</id>
+					<name>releases</name>
+					<url>http://192.168.154.175:8081/repository/maven-releases/</url>
+				</repository>
 		<snapshotRepository>
 			<id>deploymentRepo</id>
 			<name>snapshots</name>
