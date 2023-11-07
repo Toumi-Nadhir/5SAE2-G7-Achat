@@ -34,7 +34,7 @@ FROM openjdk:8-jdk-alpine
 EXPOSE 8282
 
 # Copiez le fichier JAR de votre application dans le conteneur
-COPY target/tpAchatProject-1.0.jar tpAchatProject.jar
+COPY target/5SAE2-G7-tpAchatProject-1.0.jar 5SAE2-G7-tpAchatProject.jar
 
 # Démarrez l'application Spring Boot
-ENTRYPOINT ["java", "-jar", "tpAchatProject.jar"]
+ENTRYPOINT ["java", "-jar", "5SAE2-G7-tpAchatProject.jar"]
