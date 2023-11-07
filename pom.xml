@@ -203,7 +203,8 @@
 	<distributionManagement>
 		<repository>
 			<id>deploymentRepo</id>
-			<url>http://192.168.154.175:8081/repository/maven-releases/</url>
+			<!--<url>http://192.168.154.175:8081/repository/maven-releases/</url>-->
+			<url>http://10.0.2.15:8081/repository/maven-releases/</url>
 		</repository>
 	</distributionManagement>
 </project>
