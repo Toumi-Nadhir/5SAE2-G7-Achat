@@ -2,17 +2,6 @@ version: "3"
 
 services:
 
-  mysql-db:
-    image: mysql:8.0.31
-    container_name: mysql-db
-    environment:
-      MYSQL_ROOT_PASSWORD: 'root'
-      MYSQL_DATABASE: 'achatdb'
-    ports:
-      - target: 3306
-        published: 3306
-        protocol: tcp
-
 
   springboot-app:
 
@@ -22,7 +11,7 @@ services:
       SPRING_DATASOURCE_URL: jdbc:mysql://192.168.142.128:3306/achatdb?createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: root
-      MYSQL_HOST: mysql-db
+    
       MYSQL_USER: root
       MYSQL_ROOT_PASSWORD: root
       MYSQL_PASSWORD: root
@@ -30,5 +19,4 @@ services:
     restart: on-failure
     ports:
       - 8089:8089
-    links:
-      - mysql-db
+    
