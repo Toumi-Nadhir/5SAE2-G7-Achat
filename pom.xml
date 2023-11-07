@@ -9,7 +9,8 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.esprit.examen</groupId>
-	<artifactId>5SAE2-G7-tpAchatProject</artifactId>
+	<artifactId>tpAchatProject</artifactId>
+	<!--<artifactId>5SAE2-G7-tpAchatProject</artifactId> -->
 	<version>1.0-SNAPSHOT</version>
 	<name>tpAchatProject</name>
 	<description>tpAchatProject</description>
@@ -188,7 +189,9 @@
 			<url>http://192.168.37.128:8081/repository/maven-snapshots/</url>
 			-->
 
-			<url>http://192.168.17.139:8081//repository/maven-snapshots/</url>
+			<!--<url>http://192.168.17.139:8081//repository/maven-snapshots/</url>
+			-->
+			<url>http://192.168.154.175:8081/repository/maven-releases/</url>
 			<layout>default</layout>
 		</snapshotRepository>
 	</distributionManagement>
