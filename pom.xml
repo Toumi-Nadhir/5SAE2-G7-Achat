@@ -11,7 +11,8 @@
 	<groupId>com.esprit.examen</groupId>
 	<artifactId>tpAchatProject</artifactId>
 	<!--<artifactId>5SAE2-G7-tpAchatProject</artifactId> -->
-	<version>1.0-SNAPSHOT</version>
+	<!--<version>1.0-SNAPSHOT</version>-->
+	<version>1.0</version>
 	<name>tpAchatProject</name>
 	<description>tpAchatProject</description>
 	<properties>
@@ -173,11 +174,11 @@
 <!--		</repository>-->
 <!--	</distributionManagement>-->
 	<distributionManagement>
-		<!--		<repository>-->
-		<!--			<id>releases</id>-->
-		<!--			<name>releases</name>-->
-		<!--			<url>http://somerepo:8081/nexus/content/repositories/releases/</url>-->
-		<!--		</repository>-->
+		<repository>
+					<id>releases</id>
+					<name>releases</name>
+					<url>http://192.168.154.175:8081/repository/maven-releases/</url>
+				</repository>
 		<snapshotRepository>
 			<id>deploymentRepo</id>
 			<name>snapshots</name>
@@ -191,7 +192,7 @@
 
 			<!--<url>http://192.168.17.139:8081//repository/maven-snapshots/</url>
 			-->
-			<url>http://192.168.154.175:8081/repository/maven-releases/</url>
+		
 			<layout>default</layout>
 		</snapshotRepository>
 	</distributionManagement>
