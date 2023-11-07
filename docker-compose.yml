@@ -16,10 +16,10 @@ services:
 
   springboot-app:
 
-    image: nadhirtoumi/5sae2-g7-tpachatproject:latest
+    image: mohamedanas03/5sae2-g7-tpachatproject:latest
     container_name: springboot-app
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://192.168.17.139:3306/achatdb?createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+      SPRING_DATASOURCE_URL: jdbc:mysql://10.0.2.15:3306/achatdb?createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: root
       MYSQL_HOST: mysql-db
@@ -32,21 +32,3 @@ services:
       - 8089:8089
     links:
       - mysql-db
-
-#  springboot-app:
-#
-#    image: nouresprit99/nourbenamor_g7_achat:latest
-#    container_name: springboot-app
-#    environment:
-#      SPRING_DATASOURCE_URL: jdbc:mysql://192.168.142.128:3306/achatdb?createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-#      SPRING_DATASOURCE_USERNAME: root
-#      SPRING_DATASOURCE_PASSWORD: root
-#
-#      MYSQL_USER: root
-#      MYSQL_ROOT_PASSWORD: root
-#      MYSQL_PASSWORD: root
-#      MYSQL_DATABASE: achatdb
-#    restart: on-failure
-#    ports:
-#      - 8089:8089
-#
