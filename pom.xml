@@ -9,10 +9,10 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.esprit.examen</groupId>
-	<artifactId>tpAchatProject</artifactId>
-	<!--<artifactId>5SAE2-G7-tpAchatProject</artifactId> -->
-	<!--<version>1.0-SNAPSHOT</version>-->
-	<version>1.0</version>
+<!--	<artifactId>tpAchatProject</artifactId>-->
+	<artifactId>5SAE2-G7-tpAchatProject</artifactId>
+	<version>1.0-SNAPSHOT</version>
+<!--	<version>1.0</version>-->
 	<name>tpAchatProject</name>
 	<description>tpAchatProject</description>
 	<properties>
@@ -173,38 +173,38 @@
 <!--			<layout>default</layout>-->
 <!--		</repository>-->
 <!--	</distributionManagement>-->
-	<!--<distributionManagement>
+	<distributionManagement>
 
 
-		<repository>
+<!--		<repository>-->
 
-					<id>releases</id>
-					<name>releases</name>
-					<url>http://192.168.154.175:8081/repository/maven-releases/</url>
-				</repository>
+<!--					<id>releases</id>-->
+<!--					<name>releases</name>-->
+<!--					<url>http://192.168.154.175:8081/repository/maven-releases/</url>-->
+<!--				</repository>-->
 		<snapshotRepository>
 			<id>deploymentRepo</id>
 			<name>snapshots</name>
-			&lt;!&ndash;			<url>http://192.168.240.128:8081/repository/maven-snapshots/</url>
+			<url>http://192.168.240.128:8081/repository/maven-snapshots/</url>
 
-			&ndash;&gt;
 
-			&lt;!&ndash;<url>http://192.168.142.128:8081/repository/maven-snapshots/</url>
+
+			<!--<url>http://192.168.142.128:8081/repository/maven-snapshots/</url>
 			<url>http://192.168.37.128:8081/repository/maven-snapshots/</url>
-			&ndash;&gt;
+			-->
 
-			&lt;!&ndash;<url>http://192.168.17.139:8081//repository/maven-snapshots/</url>
-			&ndash;&gt;
-		
+			<!--<url>http://192.168.17.139:8081//repository/maven-snapshots/</url>
+			-->
+
 			<layout>default</layout>
 		</snapshotRepository>
-	</distributionManagement>-->
-
-	<distributionManagement>
-		<repository>
-			<id>deploymentRepo</id>
-			<!--<url>http://192.168.154.175:8081/repository/maven-releases/</url>-->
-			<url>http://10.0.2.15:8081/repository/maven-releases/</url>
-		</repository>
 	</distributionManagement>
+
+<!--	<distributionManagement>-->
+<!--		<repository>-->
+<!--			<id>deploymentRepo</id>-->
+<!--			&lt;!&ndash;<url>http://192.168.154.175:8081/repository/maven-releases/</url>&ndash;&gt;-->
+<!--			<url>http://10.0.2.15:8081/repository/maven-releases/</url>-->
+<!--		</repository>-->
+<!--	</distributionManagement>-->
 </project>
